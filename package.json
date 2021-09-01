@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rguzg/SimpleAPI/issues"
   },
-  "homepage": "https://github.com/rguzg/SimpleAPI#readme"
+  "homepage": "https://github.com/rguzg/SimpleAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
