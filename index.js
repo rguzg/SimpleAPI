@@ -1,11 +1,4 @@
-/* 
-  dotenv/config must be imported first so that all other imported modules 
-  have access to the environment variables
-
-  For more info check out: https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-*/
-
-import "dotenv/config";
+require('dotenv').config();
 
 const express = require("express");
 const app = express();
