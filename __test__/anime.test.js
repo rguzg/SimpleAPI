@@ -1,4 +1,4 @@
-const app = require("../index");
+const app = require("../server");
 const requestTester = require("supertest");
 
 describe("GET /anime", () => {

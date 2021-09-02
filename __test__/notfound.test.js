@@ -1,5 +1,5 @@
 const requestTester = require("supertest");
-const app = require("../index");
+const app = require("../server");
 
 describe('Not Found middleware tests', () => {
     test('GET request to a non-existent route should return a status code of 404', async () => {

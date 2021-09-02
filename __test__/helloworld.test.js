@@ -1,5 +1,5 @@
 const requestTester = require("supertest");
-const app = require("../index");
+const app = require("../server");
 
 describe("GET /helloworld", () => {
     test("Return the text 'Hello World' and a 200 status code", async () => {
