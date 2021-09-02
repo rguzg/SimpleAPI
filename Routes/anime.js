@@ -16,7 +16,7 @@ anime.get("/", async (req, res, next) => {
     try {
         search = (await axios.get(`${url}?q=${query}&page=${page}`)).data;
     } catch {
-        return res.status(500).json({ status: 502, data: "Bad Gateway" });
+        return res.status(502).json({ status: 502, data: "Bad Gateway" });
     }
 
     if (search.results.length == 0) {
