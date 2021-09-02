@@ -13,8 +13,7 @@ anime.get("/", async (req, res, next) => {
         return res.status(400).json({ status: 400, data: "Bad Request" });
     }
 
-
-    try{
+    try {
         search = (await axios.get(`${url}?q=${query}&page=${page}`)).data;
     } catch {
         return res.status(500).json({ status: 502, data: "Bad Gateway" });
