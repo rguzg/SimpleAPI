@@ -24,15 +24,15 @@ anime.get("/", async (req, res, next) => {
             .status(200)
             .json({ status: 200, data: { next: null, previous: null, results: [] } });
     }
-
+    
     let nextPage =
         search["last_page"] != page + 1
-            ? `http://${process.env.HOST}:${process.env.PORT}/anime?q=${query}&page=${page + 1}`
+            ? `http://${process.env.HOST}:${process.env.EXPOSE_PORT || process.env.PORT}/anime?q=${query}&page=${page + 1}`
             : null;
 
     let previousPage =
         page > 1
-            ? `http://${process.env.HOST}:${process.env.PORT}/anime?q=${query}&page=${page - 1}`
+            ? `http://${process.env.HOST}:${process.env.EXPOSE_PORT || process.env.PORT}/anime?q=${query}&page=${page - 1}`
             : null;
 
     let searchResult = {
