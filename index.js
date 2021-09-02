@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended: true}));
 
 // Routes
 app.use('/helloworld', require('./Routes/helloworld'));
+app.use('/anime', require('./Routes/anime'));
 
 app.use(notfound);
 
